@@ -1,0 +1,116 @@
+<!doctype html>
+<html ng-app='nfmusic'></html>
+<head>
+  <meta charset='UTF-8'>
+  <title>nfmusic</title>
+  <link href='/css/foundation.min.css' rel='stylesheet'>
+  <link href='/css/normalize.css' rel='stylesheet'>
+  <link href='/css/app.css' rel='stylesheet'>
+  <link href='data:text/css;base64,LyoqCiAqIEtFWVMuY3NzCiAqCiAqIEEgc2ltcGxlIHN0eWxlc2hlZXQgZm9yIHJlbmRlcmluZyBiZWF1dGlmdWwga2V5Ym9hcmQtc3R5bGUgZWxlbWVudHMuCiAqCiAqIEF1dGhvcjogIE1pY2hhZWwgSMO8bmVidXJnCiAqIFdlYnNpdGU6IGh0dHA6Ly9taWNoYWVsaHVlLmNvbS9rZXlzY3NzCiAqIExpY2Vuc2U6IE1JVCBMaWNlbnNlIChzZWUgTElDRU5TRS50eHQpCiAqLwoKLyogQmFzZSBzdHlsZSwgZXNzZW50aWFsIGZvciBldmVyeSBrZXkuICovCmtiZCwgLmtleSB7CglkaXNwbGF5OiBpbmxpbmU7CglkaXNwbGF5OiBpbmxpbmUtYmxvY2s7CgltaW4td2lkdGg6IDFlbTsKCXBhZGRpbmc6IC4yZW0gLjNlbTsKCWZvbnQ6IG5vcm1hbCAuODVlbS8xICJMdWNpZGEgR3JhbmRlIiwgTHVjaWRhLCBBcmlhbCwgc2Fucy1zZXJpZjsKCXRleHQtYWxpZ246IGNlbnRlcjsKCXRleHQtZGVjb3JhdGlvbjogbm9uZTsKCS1tb3otYm9yZGVyLXJhZGl1czogLjNlbTsKCS13ZWJraXQtYm9yZGVyLXJhZGl1czogLjNlbTsKCWJvcmRlci1yYWRpdXM6IC4zZW07Cglib3JkZXI6IG5vbmU7CgljdXJzb3I6IGRlZmF1bHQ7CgktbW96LXVzZXItc2VsZWN0OiBub25lOwoJLXdlYmtpdC11c2VyLXNlbGVjdDogbm9uZTsKCXVzZXItc2VsZWN0OiBub25lOwp9CmtiZFt0aXRsZV0sIC5rZXlbdGl0bGVdIHsKCWN1cnNvcjogaGVscDsKfQoKLyogRGFyayBzdHlsZSBmb3IgZGlzcGxheSBvbiBsaWdodCBiYWNrZ3JvdW5kLiBUaGlzIGlzIHRoZSBkZWZhdWx0IHN0eWxlLiAqLwprYmQsIGtiZC5kYXJrLCAuZGFyay1rZXlzIGtiZCwgLmtleSwgLmtleS5kYXJrLCAuZGFyay1rZXlzIC5rZXkgewoJYmFja2dyb3VuZDogcmdiKDgwLCA4MCwgODApOwoJYmFja2dyb3VuZDogLW1vei1saW5lYXItZ3JhZGllbnQodG9wLCByZ2IoNjAsIDYwLCA2MCksIHJnYig4MCwgODAsIDgwKSk7CgliYWNrZ3JvdW5kOiAtd2Via2l0LWdyYWRpZW50KGxpbmVhciwgbGVmdCB0b3AsIGxlZnQgYm90dG9tLCBmcm9tKHJnYig2MCwgNjAsIDYwKSksIHRvKHJnYig4MCwgODAsIDgwKSkpOwoJY29sb3I6IHJnYigyNTAsIDI1MCwgMjUwKTsKCXRleHQtc2hhZG93OiAtMXB4IC0xcHggMCByZ2IoNzAsIDcwLCA3MCk7CgktbW96LWJveC1zaGFkb3c6IGluc2V0IDAgMCAxcHggcmdiKDE1MCwgMTUwLCAxNTApLCBpbnNldCAwIC0uMDVlbSAuNGVtIHJnYig4MCwgODAsIDgwKSwgMCAuMWVtIDAgcmdiKDMwLCAzMCwgMzApLCAwIC4xZW0gLjFlbSByZ2JhKDAsIDAsIDAsIC4zKTsKCS13ZWJraXQtYm94LXNoYWRvdzogaW5zZXQgMCAwIDFweCByZ2IoMTUwLCAxNTAsIDE1MCksIGluc2V0IDAgLS4wNWVtIC40ZW0gcmdiKDgwLCA4MCwgODApLCAwIC4xZW0gMCByZ2IoMzAsIDMwLCAzMCksIDAgLjFlbSAuMWVtIHJnYmEoMCwgMCwgMCwgLjMpOwoJYm94LXNoYWRvdzogaW5zZXQgMCAwIDFweCByZ2IoMTUwLCAxNTAsIDE1MCksIGluc2V0IDAgLS4wNWVtIC40ZW0gcmdiKDgwLCA4MCwgODApLCAwIC4xZW0gMCByZ2IoMzAsIDMwLCAzMCksIDAgLjFlbSAuMWVtIHJnYmEoMCwgMCwgMCwgLjMpOwp9CgovKiBMaWdodCBzdHlsZSBmb3IgZGlzcGxheSBvbiBkYXJrIGJhY2tncm91bmQuICovCmtiZC5saWdodCwgLmxpZ2h0LWtleXMga2JkLCAua2V5LmxpZ2h0LCAubGlnaHQta2V5cyAua2V5IHsKCWJhY2tncm91bmQ6IHJnYigyNTAsIDI1MCwgMjUwKTsKCWJhY2tncm91bmQ6IC1tb3otbGluZWFyLWdyYWRpZW50KHRvcCwgcmdiKDIxMCwgMjEwLCAyMTApLCByZ2IoMjU1LCAyNTUsIDI1NSkpOwoJYmFja2dyb3VuZDogLXdlYmtpdC1ncmFkaWVudChsaW5lYXIsIGxlZnQgdG9wLCBsZWZ0IGJvdHRvbSwgZnJvbShyZ2IoMjEwLCAyMTAsIDIxMCkpLCB0byhyZ2IoMjU1LCAyNTUsIDI1NSkpKTsKCWNvbG9yOiAgcmdiKDUwLCA1MCwgNTApOwoJdGV4dC1zaGFkb3c6IDAgMCAycHggcmdiKDI1NSwgMjU1LCAyNTUpOwoJLW1vei1ib3gtc2hhZG93OiBpbnNldCAwIDAgMXB4IHJnYigyNTUsIDI1NSwgMjU1KSwgaW5zZXQgMCAwIC40ZW0gcmdiKDIwMCwgMjAwLCAyMDApLCAwIC4xZW0gMCByZ2IoMTMwLCAxMzAsIDEzMCksIDAgLjExZW0gMCByZ2JhKDAsIDAsIDAsIC40KSwgMCAuMWVtIC4xMWVtIHJnYmEoMCwgMCwgMCwgLjkpOwoJLXdlYmtpdC1ib3gtc2hhZG93OiBpbnNldCAwIDAgMXB4IHJnYigyNTUsIDI1NSwgMjU1KSwgaW5zZXQgMCAwIC40ZW0gcmdiKDIwMCwgMjAwLCAyMDApLCAwIC4xZW0gMCByZ2IoMTMwLCAxMzAsIDEzMCksIDAgLjExZW0gMCByZ2JhKDAsIDAsIDAsIC40KSwgMCAuMWVtIC4xMWVtIHJnYmEoMCwgMCwgMCwgLjkpOwoJYm94LXNoYWRvdzogaW5zZXQgMCAwIDFweCByZ2IoMjU1LCAyNTUsIDI1NSksIGluc2V0IDAgMCAuNGVtIHJnYigyMDAsIDIwMCwgMjAwKSwgMCAuMWVtIDAgcmdiKDEzMCwgMTMwLCAxMzApLCAwIC4xMWVtIDAgcmdiYSgwLCAwLCAwLCAuNCksIDAgLjFlbSAuMTFlbSByZ2JhKDAsIDAsIDAsIC45KTsKfQ==' rel='stylesheet'>
+  <script src='/js/jquery-2.1.1.min.js'></script>
+  <script src='https://code.jquery.com/ui/1.11.1/jquery-ui.min.js'></script>
+  <script src='/js/lang.js'></script>
+  <script src='/js/id3.js'></script>
+  <script src='/js/foundation.min.js'></script>
+  <script src='/js/base64.js'></script>
+  <script src='/js/jsonp.js'></script>
+  <script src='/js/modal.js'></script>
+</head>
+<body>
+  <iframe frameborder='0' id='sciframe' src='https://w.soundcloud.com/player/?url=' style='display: none'></iframe>
+  <div class='vk-container'>
+    <img alt='' class='vkbtn' src='/img/VK.png'>
+    <div class='vk-tooltip'>Нажмите здесь для авторизации через ВКонтакте</div>
+  </div>
+  <div class='nav-bar'>
+    <div class='nav-bar-search'>
+      <label for='nav-bar-search'>
+        <i class='search'></i>
+        <i class='clear' ng-class="searchInputFocus?'dark':'light'" ng-click="searchText = ''" ng-show='searchText.length &gt; 0'></i>
+      </label>
+      <input name='nav-bar-search' ng-blur='searchInputFocus = false' ng-focus='searchInputFocus = true' ng-model='searchText' placeholder='Search' type='text'>
+    </div>
+  </div>
+  <div class='musiclist'>
+    <div class='search'>
+      <input type='text'>
+    </div>
+    <ul></ul>
+  </div>
+  <div class='playlist' ng-class='show_playlist' ng-controller='PlaylistCtrl'>
+    <ul>
+      <li ng-class='(track == player_playlist[currentSong])?"play":""' ng-click='play(player_playlist.indexOf(track))' ng-repeat='track in player_playlist'>
+        <span class='artist'>{{track.artist}}</span>
+        <span class='title'>{{track.title}}</span>
+      </li>
+    </ul>
+  </div>
+  <div class='player' ng-class="(hidden || default)?'':'show' + ' ' + show_playlist" ng-controller='playerCtrl'>
+    <div class='player-content'>
+      <div class='controls-left'>
+        <div class='media-poster hide' ng-class="(coverArt == '' || coverArt == undefined || coverArt == null)?'hide':''" style='background-image: url({{coverArt}})'></div>
+        <div class='previous-btn player-link-btn' ng-class="currentSong == 0?'disabled':''" ng-click='prev()'>
+          <i></i>
+        </div>
+        <div class='play-btn player-link-btn' ng-click='play()' ng-show='paused'>
+          <i></i>
+        </div>
+        <div class='pause-btn player-link-btn' ng-click='pause()' ng-show='!paused'>
+          <i></i>
+        </div>
+        <div class='stop-btn player-link-btn' ng-click='stop()'>
+          <i></i>
+        </div>
+        <div class='next-btn player-link-btn' ng-class="currentSong == playlist.length-1?'disabled':''" ng-click='next()'>
+          <i></i>
+        </div>
+      </div>
+      <div class='controls-center'>
+        <div class='media-title'>
+          <div class='artist'>{{artist}}</div>
+          <div class='title'>{{title}}</div>
+        </div>
+        <div class='seek-bar-container'>
+          <div class='player-position'>{{position}}</div>
+          <div class='player-duration'>{{duration}}</div>
+          <div class='player-seek-bar'>
+            <div class='player-slider-track'>
+              <div class='player-slider-buffer'></div>
+              <div class='player-slider-progress'></div>
+              <div class='player-slider-thumb'></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='controls-right'>
+        <div class='playlist-btn player-link-btn' ng-click='showPlaylist()' ng-show="show_playlist == '' &amp;&amp; player_playlist.length &gt;0">
+          <i></i>
+        </div>
+        <div class='hide-playlist-btn player-link-btn' ng-click='hidePlaylist()' ng-show="show_playlist == 'show-playlist'">
+          <i></i>
+        </div>
+        <div class='player-volume-slider player-seek-bar'>
+          <div class='player-slider-track'>
+            <div class='player-slider-progress' style='width: 10%'></div>
+            <div class='player-slider-thumb' style='left: 10%'></div>
+          </div>
+        </div>
+        <div class='volume-btn player-link-btn high' ng-click='mute()'>
+          <i class='volume-high' ng-show='volume &gt;= 0.5'></i>
+          <i class='volume-low' ng-show='volume &lt; 0.5 &amp;&amp; volume &gt;= 0.05'></i>
+          <i class='mute' ng-show='volume &lt; 0.05'></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src='https://w.soundcloud.com/player/api.js'></script>
+  <script src='/js/track.js'></script>
+  <script src='/js/player.js'></script>
+  <script src='/js/soundcloud.js'></script>
+  <script src='/js/main.js'></script>
+  <script src='/js/angular.min.js'></script>
+  <script src='https://code.angularjs.org/1.3.1/angular-route.js'></script>
+  <script src='https://code.angularjs.org/1.3.1/angular-resource.js'></script>
+  <script src='/js/modules.js'></script>
+  <script src='/js/controllers.js'></script>
+</body>

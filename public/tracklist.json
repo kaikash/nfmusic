@@ -1,0 +1,30 @@
+[
+	{
+		"type": "mp3",
+		"title": "No More (Radio Edit)",
+		"artist": "Masoud feat. Aneym",
+		"url": "song2.mp3",
+		"coverArt": ""
+	},
+	{
+		"type": "mp3",
+		"title": "Chandelier",
+		"artist": "Sia",
+		"url": "song1.mp3",
+		"coverArt": "http://upload.wikimedia.org/wikipedia/en/c/c8/Chandelier_by_Sia_coverwork.jpg"
+	},
+	{
+		"type": "mp3",
+		"title": "I Never Find (Original Mix)",
+		"artist": "Matteo Marini",
+		"url": "song3.mp3",
+		"coverArt": "http://images.junostatic.com/full/CS1487551-02A-BIG.jpg"
+	},
+	{
+		"type": "mp3",
+		"title": "Man On The Run (Original Mix)",
+		"artist": "Dash Berlin with Cerf, Mitiska & Jaren",
+		"url": "song4.mp3",
+		"coverArt": ""
+	}
+]
